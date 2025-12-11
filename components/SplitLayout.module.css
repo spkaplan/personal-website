@@ -34,9 +34,9 @@
     /* Expand on hover */
 }
 
-/* Personal Mode: Left 75%, Right 25% */
+/* Personal Mode: Left 90%, Right 10% */
 .personal .left {
-    flex: 3;
+    flex: 9;
     cursor: default;
     overflow-y: auto;
     /* Allow scrolling for content */
@@ -61,11 +61,11 @@
 
 .personal .right:hover {
     opacity: 1;
-    flex: 1.2;
+    flex: 1.5;
     /* Slight expansion on hover to invite click */
 }
 
-/* Professional Mode: Left 25%, Right 75% */
+/* Professional Mode: Left 10%, Right 90% */
 .professional .left {
     flex: 1;
     cursor: pointer;
@@ -74,11 +74,11 @@
 
 .professional .left:hover {
     opacity: 1;
-    flex: 1.2;
+    flex: 1.5;
 }
 
 .professional .right {
-    flex: 3;
+    flex: 9;
     cursor: default;
     overflow-y: auto;
 
