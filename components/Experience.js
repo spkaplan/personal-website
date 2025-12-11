@@ -29,17 +29,31 @@ export default function Experience() {
         <section className={styles.section}>
             <h2 className={styles.title}>Professional Experience</h2>
 
-            {experience.map((company) => (
-                <div key={company.id} className={styles.companyBlock}>
-                    <h3 className={styles.companyName}>{company.company}</h3>
+            {experience.map((role) => (
+                <div key={role.id} className={styles.companyBlock}>
+                    <h3 className={styles.companyName}>{role.company}</h3>
 
-                    {company.roles.map((role, index) => (
-                        <div key={index} className={styles.role}>
-                            <div className={styles.roleTitle}>{role.title}</div>
-                            <div className={styles.roleMeta}>{role.duration} | {role.location}</div>
-                            <p className={styles.roleDesc}>{role.description}</p>
-                        </div>
-                    ))}
+                    <div className={styles.role}>
+                        <div className={styles.roleTitle}>{role.role}</div>
+                        <div className={styles.roleMeta}>{role.period}</div>
+                        <p className={styles.roleDesc}>{role.description}</p>
+
+                        {role.achievements && (
+                            <ul className={styles.achievements}>
+                                {role.achievements.map((item, idx) => (
+                                    <li key={idx} className={styles.achievement}>{item}</li>
+                                ))}
+                            </ul>
+                        )}
+
+                        {role.techStack && (
+                            <div className={styles.techStack}>
+                                {role.techStack.map((tech, idx) => (
+                                    <span key={idx} className={styles.techTag}>{tech}</span>
+                                ))}
+                            </div>
+                        )}
+                    </div>
                 </div>
             ))}
         </section>

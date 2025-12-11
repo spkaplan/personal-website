@@ -2,24 +2,27 @@ import React from 'react';
 import Header from './Header';
 import Hero from './Hero';
 import About from './About';
+import Skills from './Skills';
 import Experience from './Experience';
 import Projects from './Projects';
 import Footer from './Footer';
 
-export default function ProfessionalContent() {
+export default function ProfessionalContent({ onContactClick }) {
     return (
         <>
-            <Header />
+            <Header onContactClick={onContactClick} />
             <Hero
                 title="Engineering Director & Technical Leader"
                 subtitle="Building high-performance teams and scalable infrastructure. Specializing in Operational Excellence, Distributed Systems, and Servant Leadership."
                 ctaText="Contact Me"
-                ctaLink="mailto:sam@example.com"
+                ctaLink="#"
+                onCtaClick={onContactClick}
             />
             <About
                 title="Professional Profile"
                 description="I am an Engineering Director with over 8 years of experience building critical infrastructure at scale (Salesforce, Expedia). I believe in Servant Leadership and Extreme Ownership—empowering teams to deliver fault-tolerant, high-throughput systems while fostering a culture of psychological safety and continuous improvement."
             />
+            <Skills />
             <Experience />
             <Projects />
             <Footer />

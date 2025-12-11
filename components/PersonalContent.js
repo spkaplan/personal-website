@@ -4,10 +4,10 @@ import Hero from './Hero';
 import About from './About';
 import Footer from './Footer';
 
-export default function PersonalContent() {
+export default function PersonalContent({ onContactClick }) {
     return (
         <>
-            <Header />
+            <Header onContactClick={onContactClick} />
             <Hero
                 title="Hi, I'm Sam."
                 subtitle="I'm a space enthusiast, lifelong learner, and software engineer. Welcome to my digital garden."

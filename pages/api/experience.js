@@ -1,8 +1,8 @@
-import { ExperienceService } from '../../services/ExperienceService';
+import { getExperience } from '../../services/ExperienceService';
 
-export default function handler(req, res) {
+export default async function handler(req, res) {
     if (req.method === 'GET') {
-        const experience = ExperienceService.getAllExperience();
+        const experience = await getExperience();
         res.status(200).json(experience);
     } else {
         res.status(405).json({ message: 'Method not allowed' });
