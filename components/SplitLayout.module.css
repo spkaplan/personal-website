@@ -1,0 +1,181 @@
+.container {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.split {
+    display: flex;
+    flex-direction: column;
+    transition: flex 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+/* Neutral Mode: 50/50 with Hover Effect */
+.neutral .left,
+.neutral .right {
+    flex: 1;
+    cursor: pointer;
+    transition: flex 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    /* Ensure transition matches */
+}
+
+.neutral .left:hover {
+    flex: 1.5;
+    /* Expand on hover */
+}
+
+.neutral .right:hover {
+    flex: 1.5;
+    /* Expand on hover */
+}
+
+/* Personal Mode: Left 75%, Right 25% */
+.personal .left {
+    flex: 3;
+    cursor: default;
+    overflow-y: auto;
+    /* Allow scrolling for content */
+
+    /* Hide Scrollbar */
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE 10+ */
+}
+
+.personal .left::-webkit-scrollbar {
+    display: none;
+    /* Chrome/Safari */
+}
+
+.personal .right {
+    flex: 1;
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.personal .right:hover {
+    opacity: 1;
+    flex: 1.2;
+    /* Slight expansion on hover to invite click */
+}
+
+/* Professional Mode: Left 25%, Right 75% */
+.professional .left {
+    flex: 1;
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.professional .left:hover {
+    opacity: 1;
+    flex: 1.2;
+}
+
+.professional .right {
+    flex: 3;
+    cursor: default;
+    overflow-y: auto;
+
+    /* Hide Scrollbar */
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE 10+ */
+}
+
+.professional .right::-webkit-scrollbar {
+    display: none;
+    /* Chrome/Safari */
+}
+
+/* Colors */
+.left {
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    color: white;
+}
+
+.right {
+    background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+    color: white;
+}
+
+/* Content Container */
+.content {
+    padding: 2rem;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Teaser Content (When collapsed) */
+.teaser {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    padding: 1rem;
+}
+
+.teaserTitle {
+    font-size: 2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    writing-mode: vertical-rl;
+    /* Vertical text for sidebar feel */
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    /* Fix rotation */
+}
+
+/* Full Page Content (When expanded) */
+.fullContent {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Gateway Specific Styles (for Neutral mode) */
+.gatewayContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+}
+
+.gatewayTitle {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.gatewaySubtitle {
+    font-size: 1.2rem;
+    max-width: 400px;
+}
+
+.button {
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.button:hover {
+    background: white;
+    color: #333;
+}

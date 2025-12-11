@@ -1,0 +1,19 @@
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 2rem;
+    margin-top: auto;
+    /* Push to bottom if content is short */
+}
+
+.text {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.link {
+    color: #fff;
+    text-decoration: underline;
+}
