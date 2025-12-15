@@ -36,7 +36,8 @@
 .contactButton {
     position: absolute;
     /* Take it out of flow so Nav stays centered */
-    right: 3rem;
+    right: 12vw;
+    /* Push past the 10% collapsed sidebar (matching nav offset) */
     background-color: var(--color-text-main);
     color: var(--color-background-dark);
     border: none;

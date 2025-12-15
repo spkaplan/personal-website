@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import SplitLayout from '../components/SplitLayout';
-import PersonalContent from '../components/PersonalContent';
-import ProfessionalContent from '../components/ProfessionalContent';
-import ContactModal from '../components/ContactModal';
+import SplitLayout from '../components/shared/SplitLayout';
+import PersonalContent from '../components/personal/PersonalContent';
+import ProfessionalContent from '../components/professional/ProfessionalContent';
+import ContactModal from '../components/shared/ContactModal';
 
 export default function Home() {
     const [mode, setMode] = useState('neutral');

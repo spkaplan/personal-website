@@ -1,35 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import styles from './Experience.module.css';
 
-export default function Experience() {
-    const [experience, setExperience] = useState([]);
-    const [loading, setLoading] = useState(true);
-
-    useEffect(() => {
-        async function fetchExperience() {
-            try {
-                const response = await fetch('/api/experience');
-                const data = await response.json();
-                setExperience(data);
-            } catch (error) {
-                console.error("Failed to fetch experience:", error);
-            } finally {
-                setLoading(false);
-            }
-        }
-
-        fetchExperience();
-    }, []);
-
-    if (loading) {
-        return <div className={styles.section}><p style={{ textAlign: 'center' }}>Loading experience...</p></div>;
-    }
-
+export default function Experience({ jobs = [] }) {
     return (
         <section id="experience" className={styles.section}>
             <h2 className={styles.title}>Professional Experience</h2>
 
-            {experience.map((role) => (
+            {jobs.map((role) => (
                 <div key={role.id} className={styles.companyBlock}>
                     <h3 className={styles.companyName}>{role.company}</h3>
 
