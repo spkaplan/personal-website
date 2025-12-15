@@ -7,7 +7,7 @@
 
 .title {
     font-size: 2.5rem;
-    color: #fff;
+    color: var(--color-text-light);
     margin-bottom: 3rem;
 }
 
@@ -18,8 +18,8 @@
 }
 
 .categoryCard {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: var(--color-surface-overlay);
+    border: 1px solid var(--color-surface-overlay);
     border-radius: 12px;
     padding: 1.5rem;
     text-align: left;
@@ -28,15 +28,14 @@
 
 .categoryCard:hover {
     transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.08);
+    background: var(--color-surface-overlay);
 }
 
 .categoryTitle {
     font-size: 1.2rem;
-    color: #60a5fa;
-    /* Light Blue */
+    color: var(--color-professional-highlight);
     margin-bottom: 1rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid var(--color-surface-overlay);
     padding-bottom: 0.5rem;
 }
 
@@ -47,8 +46,8 @@
 }
 
 .skillTag {
-    background: rgba(255, 255, 255, 0.1);
-    color: #e5e7eb;
+    background: var(--color-surface-overlay);
+    color: var(--color-text-light);
     padding: 0.25rem 0.75rem;
     border-radius: 4px;
     font-size: 0.9rem;

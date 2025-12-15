@@ -1,0 +1,51 @@
+:root {
+  /* Primary Colors */
+  --color-personal-primary: #1A3C34;
+  /* Deep Forest Green */
+  --color-professional-primary: #2D2D2D;
+  /* Professional Gray */
+
+  /* Accent Colors (Derived from Primaries) */
+  --color-surface-overlay: rgba(255, 255, 255, 0.05);
+  /* Glassmorphism background */
+  --color-personal-accent: #2A5D52;
+  /* Lighter Green for hover/borders */
+  --color-professional-accent: #4A4A4A;
+  /* Lighter Gray for hover/borders */
+  --color-professional-highlight: #D1D5DB;
+  /* Silver for text highlights */
+
+  /* Text Colors (High Contrast for Dark Backgrounds) */
+  --color-text-main: #FFFFFF;
+  /* Primary Focus (Headings) */
+  --color-text-body: #D1D5DB;
+  /* Secondary Focus (Body Text) - Distinctly gray (Silver) */
+  --color-text-muted: #9CA3AF;
+  /* De-emphasized (Meta info) */
+
+  /* Background Colors */
+  --color-background-light: #FFFFFF;
+  --color-background-dark: #121212;
+  --color-header-bg: rgba(0, 0, 0, 0.2);
+  /* Neutral dark glass for chameleon effect */
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  color: var(--color-text-body);
+  background-color: var(--color-background-dark);
+  scroll-behavior: smooth;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}

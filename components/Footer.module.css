@@ -1,6 +1,6 @@
 .footer {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--color-professional-primary);
+    color: var(--color-text-light);
     text-align: center;
     padding: 2rem;
     margin-top: auto;
@@ -10,10 +10,10 @@
 .text {
     margin: 0;
     font-size: 0.9rem;
-    color: #ccc;
+    color: var(--color-text-muted);
 }
 
 .link {
-    color: #fff;
+    color: var(--color-text-light);
     text-decoration: underline;
 }

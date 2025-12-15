@@ -22,7 +22,7 @@ export default function Skills() {
     ];
 
     return (
-        <section className={styles.skillsSection}>
+        <section id="skills" className={styles.skillsSection}>
             <h2 className={styles.title}>Technical Expertise</h2>
             <div className={styles.categoryGrid}>
                 {skillCategories.map((category, index) => (

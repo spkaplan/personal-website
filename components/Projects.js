@@ -29,7 +29,7 @@ export default function Projects() {
     }
 
     return (
-        <section className={styles.section}>
+        <section id="projects" className={styles.section}>
             <h2 className={styles.title}>Featured Projects</h2>
             <div className={styles.grid}>
                 {/* 3. MAP: Loop through the array and render a Card for each item */}

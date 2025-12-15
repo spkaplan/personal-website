@@ -5,19 +5,24 @@
     justify-content: center;
     text-align: center;
     padding: 4rem 2rem;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 4rem 2rem;
+    background: var(--color-surface-overlay);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    color: var(--color-text-main);
     min-height: 60vh;
 }
 
 .title {
     font-size: 3.5rem;
     margin-bottom: 1rem;
-    color: #2c3e50;
+    color: var(--color-text-main);
 }
 
 .subtitle {
     font-size: 1.5rem;
-    color: #555;
+    color: var(--color-text-main);
     max-width: 600px;
     margin-bottom: 2rem;
     line-height: 1.6;
@@ -26,8 +31,8 @@
 .ctaButton {
     padding: 1rem 2rem;
     font-size: 1.2rem;
-    background-color: #0070f3;
-    color: white;
+    background-color: var(--color-personal-accent);
+    color: var(--color-text-light);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -35,5 +40,5 @@
 }
 
 .ctaButton:hover {
-    background-color: #0051a2;
+    filter: brightness(1.1);
 }

@@ -8,9 +8,15 @@ import Projects from './Projects';
 import Footer from './Footer';
 
 export default function ProfessionalContent({ onContactClick }) {
+    const navItems = [
+        { label: 'Experience', href: '#experience' },
+        { label: 'Skills', href: '#skills' },
+        { label: 'Projects', href: '#projects' }
+    ];
+
     return (
         <>
-            <Header onContactClick={onContactClick} />
+            <Header navItems={navItems} onContactClick={onContactClick} />
             <Hero
                 title="Engineering Director & Technical Leader"
                 subtitle="Building high-performance teams and scalable infrastructure. Specializing in Operational Excellence, Distributed Systems, and Servant Leadership."
@@ -22,8 +28,8 @@ export default function ProfessionalContent({ onContactClick }) {
                 title="Professional Profile"
                 description="I am an Engineering Director with over 8 years of experience building critical infrastructure at scale (Salesforce, Expedia). I believe in Servant Leadership and Extreme Ownership—empowering teams to deliver fault-tolerant, high-throughput systems while fostering a culture of psychological safety and continuous improvement."
             />
-            <Skills />
             <Experience />
+            <Skills />
             <Projects />
             <Footer />
         </>

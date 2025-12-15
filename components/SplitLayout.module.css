@@ -3,7 +3,7 @@
     height: 100vh;
     width: 100%;
     overflow: hidden;
-    background-color: #000;
+    background-color: var(--color-background-dark);
 }
 
 .split {
@@ -96,13 +96,13 @@
 
 /* Colors */
 .left {
-    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
-    color: white;
+    background: var(--color-personal-primary);
+    color: var(--color-text-light);
 }
 
 .right {
-    background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
-    color: white;
+    background: var(--color-professional-primary);
+    color: var(--color-text-light);
 }
 
 /* Content Container */

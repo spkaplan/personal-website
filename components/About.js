@@ -9,7 +9,7 @@ export default function About(props) {
     // 'props' is just an object: { title: "...", description: "..." }
 
     return (
-        <section className={styles.about}>
+        <section id="about" className={styles.about}>
             <h2 className={styles.title}>{props.title}</h2>
 
             {/* We can render the description passed from the parent */}
