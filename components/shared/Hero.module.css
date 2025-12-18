@@ -23,22 +23,7 @@
 .subtitle {
     font-size: 1.5rem;
     color: var(--color-text-main);
-    max-width: 600px;
+    max-width: 900px;
     margin-bottom: 2rem;
     line-height: 1.6;
-}
-
-.ctaButton {
-    padding: 1rem 2rem;
-    font-size: 1.2rem;
-    background-color: var(--color-personal-accent);
-    color: var(--color-text-light);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.2s;
-}
-
-.ctaButton:hover {
-    filter: brightness(1.1);
 }

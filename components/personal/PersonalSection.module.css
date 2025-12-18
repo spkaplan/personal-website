@@ -1,0 +1,23 @@
+.section {
+    background: var(--color-surface-overlay);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    color: var(--color-text-main);
+}
+
+.title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--color-text-main);
+}
+
+.description {
+    line-height: 1.6;
+    color: var(--color-text-body);
+    font-style: italic;
+    /* Emphasize that this is a plan/note */
+    border-left: 3px solid var(--color-personal-accent);
+    padding-left: 1rem;
+}

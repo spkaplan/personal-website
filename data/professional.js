@@ -1,13 +1,7 @@
 export const professionalData = {
     hero: {
-        title: "Engineering Director & Technical Leader",
-        subtitle: "Building high-performance teams and scalable infrastructure. Specializing in Operational Excellence, Distributed Systems, and Servant Leadership.",
-        ctaText: "Contact Me",
-        ctaLink: "#"
-    },
-    about: {
-        title: "Professional Profile",
-        description: "I am an Engineering Director with over 8 years of experience building critical infrastructure at scale (Salesforce, Expedia). I believe in Servant Leadership and Extreme Ownership—empowering teams to deliver fault-tolerant, high-throughput systems while fostering a culture of psychological safety and continuous improvement."
+        title: "Engineering Leader.",
+        subtitle: "I am an Engineering Director with over 9 years of experience building critical infrastructure at scale (Salesforce, Expedia). I believe in servant leadership and extreme ownership, empowering teams to deliver fault-tolerant, high-throughput systems while fostering a culture of trust and continuous improvement."
     },
     navItems: [
         { label: 'Experience', href: '#experience' },
@@ -72,5 +66,12 @@ export const professionalData = {
             description: "An open-source tool for auto-scaling Kubernetes clusters based on custom metrics.",
             tags: ["Go", "Kubernetes", "Prometheus"]
         }
-    ]
+    ],
+    landing: {
+        teaserTitle: "Professional",
+        gatewayTitle: "The Professional",
+        gatewaySubtitle: "Director. Leader. Builder.",
+        ctaText: "Enter Professional Site"
+    },
+    landingImage: "/assets/professional-bg.png"
 };

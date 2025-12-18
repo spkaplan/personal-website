@@ -1,15 +1,15 @@
 import React from 'react';
 import styles from './SplitLayout.module.css';
 
-export default function SplitLayout({ mode, onModeChange, children }) {
-    // mode can be: 'neutral', 'personal', 'professional'
+export default function SplitLayout({ mode, onModeChange, personalLanding, professionalLanding, personalBg, professionalBg, children }) {
+    // mode: 'neutral' | 'personal' | 'professional'
 
     return (
-        <div className={`${styles.container} ${styles[mode]}`}>
+        <div className={`${styles.container} ${styles[mode]} ${styles.reveal}`}>
 
             {/* LEFT SIDE: PERSONAL */}
             {mode === 'personal' ? (
-                // ACTIVE STATE: Render the full page content
+                // ACTIVE STATE
                 <div className={`${styles.split} ${styles.left}`}>
                     <div className={styles.content}>
                         <div className={styles.fullContent}>
@@ -18,20 +18,23 @@ export default function SplitLayout({ mode, onModeChange, children }) {
                     </div>
                 </div>
             ) : (
-                // INACTIVE STATE: Render the Teaser (Clickable)
+                // INACTIVE / TEASER STATE
                 <div
                     className={`${styles.split} ${styles.left}`}
                     onClick={() => onModeChange('personal')}
                 >
+                    {/* EFFECT BACKGROUND */}
+                    <div className={styles.revealBg} style={{ backgroundImage: `url('${personalBg}')` }} />
+
                     {mode === 'neutral' ? (
                         <div className={styles.gatewayContent}>
-                            <h1 className={styles.gatewayTitle}>The Person</h1>
-                            <p className={styles.gatewaySubtitle}>Hiker. Sci-Fi Reader. Lifelong Learner.</p>
-                            <button className={styles.button}>Enter Personal Site</button>
+                            <h1 className={styles.gatewayTitle}>{personalLanding.gatewayTitle}</h1>
+                            <p className={styles.gatewaySubtitle}>{personalLanding.gatewaySubtitle}</p>
+                            <button className={styles.button}>{personalLanding.ctaText}</button>
                         </div>
                     ) : (
                         <div className={styles.teaser}>
-                            <h2 className={styles.teaserTitle}>Personal</h2>
+                            <h2 className={styles.teaserTitle}>{personalLanding.teaserTitle}</h2>
                         </div>
                     )}
                 </div>
@@ -39,7 +42,7 @@ export default function SplitLayout({ mode, onModeChange, children }) {
 
             {/* RIGHT SIDE: PROFESSIONAL */}
             {mode === 'professional' ? (
-                // ACTIVE STATE: Render the full page content
+                // ACTIVE STATE
                 <div className={`${styles.split} ${styles.right}`}>
                     <div className={styles.content}>
                         <div className={styles.fullContent}>
@@ -48,20 +51,23 @@ export default function SplitLayout({ mode, onModeChange, children }) {
                     </div>
                 </div>
             ) : (
-                // INACTIVE STATE: Render the Teaser (Clickable)
+                // INACTIVE / TEASER STATE
                 <div
                     className={`${styles.split} ${styles.right}`}
                     onClick={() => onModeChange('professional')}
                 >
+                    {/* EFFECT BACKGROUND */}
+                    <div className={styles.revealBg} style={{ backgroundImage: `url('${professionalBg}')` }} />
+
                     {mode === 'neutral' ? (
                         <div className={styles.gatewayContent}>
-                            <h1 className={styles.gatewayTitle}>The Professional</h1>
-                            <p className={styles.gatewaySubtitle}>Director. Leader. Builder.</p>
-                            <button className={styles.button}>Enter Professional Site</button>
+                            <h1 className={styles.gatewayTitle}>{professionalLanding.gatewayTitle}</h1>
+                            <p className={styles.gatewaySubtitle}>{professionalLanding.gatewaySubtitle}</p>
+                            <button className={styles.button}>{professionalLanding.ctaText}</button>
                         </div>
                     ) : (
                         <div className={styles.teaser}>
-                            <h2 className={styles.teaserTitle}>Professional</h2>
+                            <h2 className={styles.teaserTitle}>{professionalLanding.teaserTitle}</h2>
                         </div>
                     )}
                 </div>
